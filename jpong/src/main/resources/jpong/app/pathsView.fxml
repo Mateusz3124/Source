@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808080;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jpong.app.PathController">
+    <Pane layoutX="413.0" layoutY="97.0" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #4d4d4d;" AnchorPane.rightAnchor="120.0" />
+    <Pane layoutX="413.0" layoutY="138.0" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #4d4d4d;" AnchorPane.rightAnchor="120.0" />
+    <Text fill="WHITE" layoutX="425.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="start:" AnchorPane.rightAnchor="135.8447265625">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <TextField fx:id="pathStart" layoutX="475.0" layoutY="97.0" prefHeight="25.0" prefWidth="67.0" AnchorPane.rightAnchor="58.0" />
+    <Text fill="WHITE" layoutX="425.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="end:" AnchorPane.rightAnchor="140.8984375">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <TextField fx:id="pathEnd" layoutX="475.0" layoutY="138.0" prefHeight="25.0" prefWidth="67.0" AnchorPane.rightAnchor="58.0" />
+    <Button layoutX="412.0" layoutY="193.0" mnemonicParsing="false" onAction="#findPath" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: White;" text="Find path!" textAlignment="CENTER" AnchorPane.rightAnchor="58.0" />
+    <Button layoutX="410.0" layoutY="236.0" mnemonicParsing="false" onAction="#showMain" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: WHITE;" text="Back to main menu" textAlignment="CENTER" AnchorPane.rightAnchor="58.0" />
+    <Button layoutX="279.0" layoutY="355.0" mnemonicParsing="false" onAction="#clearPaths" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: WHITE;" text="Clear paths" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" />
+    <Button fx:id="verticesButton" layoutX="141.0" layoutY="355.0" mnemonicParsing="false" onAction="#verticesMode" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: WHITE;" text="Show vertices only" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" />
+    <Button fx:id="weightsButton" layoutX="14.0" layoutY="355.0" mnemonicParsing="false" onAction="#weightsMode" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: WHITE;" text="Show weights" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" />
+    <TableView fx:id="pathsTable" layoutX="13.0" layoutY="12.0" prefHeight="333.0" prefWidth="378.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="209.0" AnchorPane.topAnchor="12.0">
+        <columns>
+            <TableColumn fx:id="buttonColumn" prefWidth="31.0" />
+            <TableColumn fx:id="pathColumn" prefWidth="347.0" />
+        </columns>
+    </TableView>
+</AnchorPane>
